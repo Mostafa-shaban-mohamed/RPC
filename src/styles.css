@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(107 76 180);
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(62, 44, 105);
+    color: white;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.btn{
+    min-width: 100px;
+    min-height: 40px;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.5s;
+}
+.btn:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.btn-primary{
+    background-color: rgb(83, 39, 185);
+}
+.btn-primary:hover{
+    background-color: rgb(57, 27, 126);
+}
+
+.btn-success{
+    background-color: rgb(45, 156, 31);
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+.btn-list{
+    list-style: none; 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    justify-content: center;
+    padding-left: 0;
+}
+
+.active-btn{
+    background-color: red !important;
+}

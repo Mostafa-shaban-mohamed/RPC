@@ -1,0 +1,41 @@
+<div>
+    <br>
+    <h1 style="text-align: center;">Start The Game</h1>
+    <hr>
+    <div style="text-align: center;">
+        <h3>Start Game By Choosing :</h3>
+        <ul class="btn-list">
+            <li><button class="btn btn-primary" [ngClass]="myChoose == 'Rock' ? 'active-btn' : ''" (click)="onChoose(1)">Rock</button></li>
+            <li><button class="btn btn-primary" [ngClass]="myChoose == 'Paper' ? 'active-btn' : ''" (click)="onChoose(2)">Paper</button></li>
+            <li><button class="btn btn-primary" [ngClass]="myChoose == 'Scissor' ? 'active-btn' : ''" (click)="onChoose(3)">Scissor</button></li>
+        </ul>
+    </div>   
+    <br>
+    <br>
+    <div>
+        <h3 style="text-align: center;">Computer Chose :</h3>
+        <h3 style="text-align: center;">{{computerChoose}}</h3>
+        
+    </div>
+    
+    <div style="position: fixed; bottom: 100px; display: flex; flex-direction: row; gap: 10px;">
+        <button class="btn btn-primary" [routerLink]="''" [routerLinkActive]="'active'">Back to Menu</button>
+        <button class="btn btn-success" (click)="onConfirm(content)">Confirm Chose</button>
+    </div>
+</div>
+
+<ng-template #content let-modal style="z-index: 1;">
+    <div class="modal-header">
+      <h4 class="modal-title" style="color: black;">Game Over</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" style="color: black;">
+      You {{FinalResult}}, Try Again !!
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-dark" (click)="modal.close('Yes')">Yes</button>
+      <button type="button" class="btn btn-dark" (click)="modal.close('No')">No</button>
+    </div>
+</ng-template>
