@@ -61,6 +61,7 @@ export class SingleGameComponent {
 
   //modal
   openModal(content: any){
+    
     this.modalService.open(content, {backdrop: false, keyboard: true}).result.then((result) => {
       //this.closeResult = ;
       console.log(`Closed with: ${result}`);
